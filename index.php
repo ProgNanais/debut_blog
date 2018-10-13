@@ -74,7 +74,7 @@ if (!empty($_POST['prenom']) AND !empty($_POST['nom']) AND !empty($_POST['age'])
 	<form action="php/minichat/minichat_post.php" method="post">
 		<?php include('php/minichat/minichat.php'); ?>
 
-		<p>Me déconnecter</a></p>
+		<p><a href="php/vues/destruction.php">Me déconnecter</a></p>
 		<?php
 		}
         include('php/include/include_script.php');

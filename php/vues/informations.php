@@ -5,7 +5,7 @@ session_start();
 <!DOCTYPE html>
 <html>
 	
-<?php include('../php/include_head.php'); ?>
+<?php include('../include/include_head.php'); ?>
 	
 	<body>
 		<h1 style="text-align: center;">Page "informations.php"</h1>
