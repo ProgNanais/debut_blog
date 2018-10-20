@@ -10,12 +10,12 @@
 			die('Erreur : ' . $e->getMessage());
 		}
 				
-		$reponse = $bdd->query('SELECT * FROM minichat ORDER BY ID DESC LIMIT 0,10');
+		$reponse = $bdd->query('SELECT ID, pseudo, message, DATE_FORMAT(date_creation, \'%d/%m/%Y %Hh%imin\') AS date FROM minichat ORDER BY ID DESC LIMIT 0,10');
 		
 		while ($donnees = $reponse->fetch()) {
 	?>
 	<div>
-		<p>Message posté par <?php echo htmlspecialchars($donnees['pseudo']); ?> :<br :>
+        <p><em><?php echo $donnees['date']; ?></em> - <strong><?php echo htmlspecialchars($donnees['pseudo']); ?></strong> :<br :>
 		<?php echo htmlspecialchars($donnees['message']); ?>
 	</div>
 	<?php
